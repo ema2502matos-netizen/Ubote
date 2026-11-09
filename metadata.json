@@ -1,0 +1,6 @@
+{
+  "name": "UBOTE Angola - Laser, Spa & Estética Corporativa",
+  "description": "Site institucional SPA da UBOTE em Luanda, Angola. Cuidados faciais, depilação a laser, rituais de spa, banhos terapêuticos e convénios corporativos de bem-estar de alto padrão.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

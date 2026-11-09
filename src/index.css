@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-luxury: 'Cormorant Garamond', 'Playfair Display', serif;
+    --font-headline: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+
+  .font-luxury {
+    font-family: var(--font-luxury);
+  }
+
+  .font-headline {
+    font-family: var(--font-headline);
+  }
+}
+
+/* Custom luxury gradients and effects */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FBF0D9 0%, #D8BE7A 40%, #B8934A 80%, #856526 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.copper-text-gradient {
+  background: linear-gradient(135deg, #FED7AA 0%, #F97316 45%, #C2410C 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card-glow {
+  background: linear-gradient(180deg, rgba(21, 31, 46, 0.75) 0%, rgba(13, 21, 32, 0.85) 100%);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(197, 168, 105, 0.2);
+}
+
+.glass-card-glow:hover {
+  box-shadow: 0 25px 50px -12px rgba(197, 168, 105, 0.15), inset 0 1px 0 0 rgba(197, 168, 105, 0.4);
+}
+
+/* Subtle Angolan geometric pattern overlay */
+.bg-angola-pattern {
+  background-image: radial-gradient(rgba(197, 168, 105, 0.08) 1px, transparent 1px),
+                    radial-gradient(rgba(200, 90, 50, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Dynamic Image Zoom Container */
+.img-zoom-container {
+  overflow: hidden;
+  position: relative;
+}
+.img-zoom-container img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+.img-zoom-container:hover img {
+  transform: scale(1.06);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1118;
+}
+::-webkit-scrollbar-thumb {
+  background: #232E3E;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A869;
+}
